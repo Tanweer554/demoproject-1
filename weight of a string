@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+
+//Read only region start
+public class UserMainCode
+{
+    public int weightOfString(string input1,int input2)
+    {
+        //Read only region end
+        //Write code here
+        input1=input1.ToUpper();
+		string s=input1;
+		int result=0;
+		if(input2==1){
+		   for(int i=0;i<input1.Length;i++){
+              if(s[i]>='A' && s[i]<='Z'){
+				  result+=(int)s[i]-64;
+			  }		  
+	       }
+		}
+		else{
+               for(int i=0;i<input1.Length;i++){
+              if((s[i]>='A' && s[i]<='Z') && (s[i]!='A') &&(s[i]!='E') && (s[i]!='I')  &&(s[i]!='O') && (s[i]!='U'))
+			{
+				  result+=(int)s[i]-64;
+			  }		  
+	       }
+		}
+	 
+	 return result;	
+    }
+}
